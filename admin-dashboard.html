@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>CEREAL</title>
+</head>
+<body>
+    <!-- <======TOP BAR=====> -->
+    <header class="top-bar">
+        <div class="admin-dashboard">
+            <!-- <======LOGO + TITLE=====> -->
+            <div class="admin-dashboard">
+                <img src="Icons/admin-logo.png" alt="logo" class="admin-logo" style="margin-right: 10px;">
+                <h1>Admin Dashboard</h1>
+            </div>
+
+            <!-- <======NOTIFICATION=====> -->
+            <div class="notification">
+                <button class="notification-button">
+                    <img src="Icons/notification.png" alt="Notification" class="notification-icon">
+                    <h1>Notifications</h1>
+                </button>
+            </div>
+
+            <!-- <======PROFILE ICON=====> -->
+            <div class="profile">
+                <img src="Icons/profile-icon.png" alt="Profile" class="profile-icon">
+            </div>
+        </div>
+    </header>
+
+    <!-- <======CONTENT=====> -->
+    <div class="content">
+
+        <!-- <======SIDEBAR=====> -->
+        <aside class="sidebar">
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="overview.html"><img src="Icons/overview.png" alt="">&nbsp;Overview</a></li>
+                    <li><a href="user-management.html"><img src="Icons/users.png" alt="">&nbsp;User Management</a></li>
+                    <li><a href="points-system.html"><img src="Icons/coins.png" alt="">&nbsp;Points System</a></li>
+                    <li><a href="shop-management.html"><img src="Icons/market.png" alt="">&nbsp;Shop Management</a></li>
+                    <li><a href="user-enrollment.html"><img src="Icons/user-plus.png" alt="">&nbsp;User Enrollment</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- <======MAIN CONTENT=====> -->
+        <main class="main">
+            <div class="main-header">
+
+                <!-- <======STATS HEADER=====> -->
+                <div class="cards-header">
+
+                    <!-- <======TOTAL USERS CARD=====> -->
+                    <div class="card-totalUsers">
+                        <div class="card-overlay">
+                            <div class="card-inner">
+                                <div class="card-icon-placeholder">
+                                    <img src="Icons/users.png" width="24" height="24" alt="icon">
+                                </div>
+                                <div class="card-text">
+                                    <span class="card-description">Total Users</span>
+                                    <span class="card-value">1234</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <======POINTS DISTRIBUTED CARD=====> -->
+                    <div class="card-pointsDistributed">
+                        <div class="card-overlay">
+                            <div class="card-inner">
+                                <div class="card-icon-placeholder">
+                                    <img src="Icons/coins.png" width="24" height="24" alt="icon">
+                                </div>
+                                <div class="card-text">
+                                    <span class="card-description">Points Distributed</span>
+                                    <span class="card-value">45,892</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <======SHOP ITEMS CARD=====> -->
+                    <div class="card-shopItems">
+                        <div class="card-overlay">
+                            <div class="card-inner">
+                                <div class="card-icon-placeholder">
+                                    <img src="Icons/market.png" width="24" height="24" alt="icon">
+                                </div>
+                                <div class="card-text">
+                                    <span class="card-description">Shop Items</span>
+                                    <span class="card-value">156</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <======MONTHLY GROWTH CARD=====> -->
+                    <div class="card-monthlyGrowth">
+                        <div class="card-overlay">
+                            <div class="card-inner">
+                                <div class="card-icon-placeholder">
+                                    <img src="Icons/overview.png" width="24" height="24" alt="icon">
+                                </div>
+                                <div class="card-text">
+                                    <span class="card-description">Monthly Growth</span>
+                                    <span class="card-value">+12%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- end cards-header -->
+                    
+                <!-- <======MANAGEMENT SECTION=====> -->
+                    <div class="management-section">
+
+                        <!-- <======POINTS MANAGEMENT CARD=====> -->
+                        <div class="management-card">
+                            <h2 class="card-title">Points Management</h2>
+                            <hr>
+
+                            <!-- Select User -->
+                            <label for="user-select">Select User</label>
+                            <select id="user-select">
+                                <option value="" disabled selected>Select a user</option>
+                                <option value="user1">User 1</option>
+                                <option value="user2">User 2</option>
+                                <option value="user3">User 3</option>
+                            </select>
+
+                            <!-- Points + Action -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="points-amount">Points Amount</label>
+                                    <input type="number" id="points-amount" placeholder="Enter points">
+                                </div>
+                                <div class="form-group">
+                                    <label for="points-action">Action</label>
+                                    <select id="points-action">
+                                        <option value="add">Add Points</option>
+                                        <option value="remove">Remove Points</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Reason -->
+                            <label for="points-reason">Reason</label>
+                            <textarea id="points-reason" placeholder="Enter reason"></textarea>
+
+                            <!-- Button -->
+                            <button class="btn black-btn">
+                                <img src="Icons/update.png" alt="Update" class="btn-icon"> Update Points
+                            </button>
+                        </div>
+
+                        <!-- <======SHOP MANAGEMENT CARD=====> -->
+                        <div class="management-card">
+                            <h2 class="card-title">Shop Management</h2>
+                            <hr>
+
+                            <!-- Item Name -->
+                            <label for="item-name">Item Name</label>
+                            <input type="text" id="item-name" placeholder="Enter item name">
+
+                            <!-- Price + Stock -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="item-price">Price (Points)</label>
+                                    <input type="number" id="item-price" placeholder="Enter price">
+                                </div>
+                                <div class="form-group">
+                                    <label for="item-stock">Stock Quantity</label>
+                                    <input type="number" id="item-stock" placeholder="Enter stock">
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <label for="item-description">Description</label>
+                            <textarea id="item-description" placeholder="Enter description"></textarea>
+
+                            <!-- Buttons -->
+                            <div class="button-row">
+                                <button class="btn black-btn">
+                                    <img src="Icons/add.png" alt="Add" class="btn-icon"> Add Item
+                                </button>
+                                <button class="btn red-btn">
+                                    <img src="Icons/remove.png" alt="Remove" class="btn-icon"> Remove Stock
+                                </button>
+                            </div>
+                        </div>
+
+</div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
